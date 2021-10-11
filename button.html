@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+        <meta charset="UTF-8">
+
+    </head>
+    <body> 
+        <button class="my-button" onclick ="myfunction()" >START</button>
+        
+        
+        <script >
+            function myfunction(){
+                var sum=0;
+                while(1){
+                    var num=prompt("enter any number between 1 to 10");
+                var random=Math.floor(Math.random()*10+1);
+                if(num==random){
+                    sum+=2;
+                    alert("WOLLA!u have been awarded '2' point \n u guessed  right.");
+                   
+                }
+                else {
+                    var diff=Math.abs(num-random);
+                    if(diff==1){
+                        sum+=1;
+                        alert("u were awarded 1 points \n u entered "+num+"while random number was "+random);
+                    }
+                    else {
+                        alert("u were awarded 0 points \r\n u entered "+num+" while random number was "+random);
+                    }
+                    
+                }
+                var p3=prompt(" To continue press Y else N");
+                if(p3!='N'&&p3!='Y'){
+                    alert('*unauthorised key pressed*');break;
+
+                }
+                
+                if(p3=='N') {
+                    alert(" total points awarded"+ " "+sum);
+                    alert("THANKS FOR PARTICIPATING!\n BETTER LUCK NEXT TIME");break;
+
+                }
+                
+                }    
+                
+            }
+        </script>
+
+    </body>
+</html>
